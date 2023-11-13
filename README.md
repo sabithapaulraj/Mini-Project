@@ -45,7 +45,6 @@ df.shape
 df.info()
 df.describe()
 ```
-# Output
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/d649fdec-ae8a-4f8b-b99d-6c77fb21ba38)
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/bf96931a-36a5-4af5-87cf-d5a026f771f6)
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/fc466391-a974-41c8-9c7a-9e99387a174b)
@@ -103,7 +102,7 @@ plt.show()
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/fad62dcb-99c3-448d-bcb9-c7eecafb0a03)
 
 # Univariate Analysis:
-# Univariate analysis for 'Age_band_of_driver'
+## Univariate analysis for 'Age_band_of_driver'
 ```python
 plt.figure(figsize=(10, 6))
 sns.countplot(x='Age_band_of_driver', data=df)
@@ -113,7 +112,7 @@ plt.show()
 # Output
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/dafc6c24-f8cd-4def-b270-a8db6efc8cde)
 
-# Distribution of Age_band_of_casualty
+## Distribution of Age_band_of_casualty
 ```python
 plt.figure(figsize=(10, 6))
 sns.histplot(df['Age_band_of_casualty'], bins=20, kde=True)
@@ -125,7 +124,7 @@ plt.show()
 # Output
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/89139744-4042-4466-92b9-a8afe8d6abee)
 
-# Count of Accidents by Road Surface Type:
+## Count of Accidents by Road Surface Type:
 ```python
 plt.figure(figsize=(10, 6))
 sns.countplot(x='Road_surface_type', data=df)
@@ -138,7 +137,7 @@ plt.show()
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/4f0a0bd7-4e8d-4923-bd0c-81572069570f)
 
 # Multivariate Analysis:
-# Accident Severity by Weather Conditions and Light Conditions:
+## Accident Severity by Weather Conditions and Light Conditions:
 ```python
 plt.figure(figsize=(12, 8))
 sns.countplot(x='Weather_conditions', hue='Light_conditions', data=df, hue_order=df['Light_conditions'].value_counts().index)
@@ -150,7 +149,7 @@ plt.show()
 # Output
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/06679bd1-a76c-489f-8275-30419d8ee4ff)
 
-# Vehicle Movement during Accidents by Age Band:
+## Vehicle Movement during Accidents by Age Band:
 ```python
 plt.figure(figsize=(14, 8))
 sns.countplot(x='Vehicle_movement', data=df, hue='Age_band_of_casualty')
@@ -163,7 +162,7 @@ plt.show()
 
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/e4a680ae-c55a-44ad-b627-02159eef9d23)
 
-# Multivariate analysis using a heatmap for correlation matrix
+## Multivariate analysis using a heatmap for correlation matrix
 ```python
 correlation_matrix = df.corr()
 plt.figure(figsize=(12, 8))
@@ -175,7 +174,7 @@ plt.show()
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/6f166dcd-ca78-4152-8b70-515a34612eb0)
 
 # Feature Encoding and Scaling:
-# One-Hot Encoding for categorical variables
+## One-Hot Encoding for categorical variables
 ```python
 # Identify non-numeric columns
 non_numeric_cols = df_encoded.select_dtypes(exclude=['float64', 'int64']).columns
@@ -196,7 +195,7 @@ print(df_scaled)
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/128bb31b-4e57-446c-865f-71ad3cf0fa89)
 
 # Feature Transformation:
-# Log transformation for a skewed feature
+## Log transformation for a skewed feature
 ```python
 import numpy as np
 
@@ -212,7 +211,7 @@ print(df[['Age_band_of_driver', 'Age_band_of_driver_log']])
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/fc3cc47e-1dba-4820-b34e-8559fb8a5148)
 
 # Data Visualization and Analysis:
-# Visualization of accidents severity
+## Visualization of accidents severity
 ```python
 plt.figure(figsize=(8, 6))
 sns.countplot(x='Accident_severity', data=df)
@@ -222,7 +221,7 @@ plt.show()
 # Output
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/e00b0bfc-4551-4d56-80a9-999eb7f2fee3)
 
-# Correlation Heatmap:
+## Correlation Heatmap:
 ```python
 plt.figure(figsize=(9, 6))
 sns.heatmap(df.corr(), cmap='coolwarm', annot=True, fmt=".2f")
@@ -232,7 +231,7 @@ plt.show()
 # Output
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/b1b261da-0b8f-412f-9468-0dac885388a2)
 
-# Accident Severity by Day of the Week:
+## Accident Severity by Day of the Week:
 ```python
 plt.figure(figsize=(10, 6))
 sns.countplot(x='Day_of_week', hue='Accident_severity', data=df)
@@ -244,7 +243,7 @@ plt.show()
 # Output
 ![image](https://github.com/sabithapaulraj/Mini-Project/assets/118343379/933681ea-5468-4a07-8d33-596a89f6a437)
 
-# Casualty Severity by Gender:
+## Casualty Severity by Gender:
 ```python
 plt.figure(figsize=(8, 6))
 sns.countplot(x='Sex_of_casualty', hue='Casualty_severity', data=df)
