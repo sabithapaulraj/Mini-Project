@@ -2,8 +2,11 @@
 # Road Accident Severity Analysis:
 # Mini Project by
 ```
-NAME : SABITHA P
+NAME : SABITHA P 
 REG_NO : 212222040137
+AND
+NAME : NIRAUNJANA GAYATHRI G R
+REG_NO : 212222230096
 ```
 # AIM
 To analyse the Road Accident dataset and to understand about severity of the accidents.
